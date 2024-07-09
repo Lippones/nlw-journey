@@ -1,3 +1,5 @@
+'use client'
+import { Button } from '@/components/ui/button'
 import { ArrowRight, UserRoundPlus } from 'lucide-react'
 
 interface InviteGuestStepProps {
@@ -33,13 +35,10 @@ export function InviteGuestStep({
 
       <div className="w-px h-6 bg-zinc-800" />
 
-      <button
-        onClick={openConfirmTripModal}
-        className="bg-lime-300 text-lime-950 rounded-lg px-5 h-11 font-medium inline-flex items-center gap-2 hover:bg-lime-400 transition-colors"
-      >
+      <Button onClick={openConfirmTripModal}>
         Confirmar viagem
         <ArrowRight className="size-5" />
-      </button>
+      </Button>
     </div>
   )
 }

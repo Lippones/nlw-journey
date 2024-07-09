@@ -1,6 +1,7 @@
 'use client'
 import { Plus, User, X } from 'lucide-react'
 import { FormEvent } from 'react'
+import { Button } from '../ui/button'
 
 interface TripConfirmModalProps {
   closeModal: () => void
@@ -34,7 +35,7 @@ export function TripConfirmModal({
           </p>
         </div>
         <form onSubmit={createTrip} className="space-y-3">
-          <div className="py-2.5 p-4 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2">
+          <div className="h-14 px-4 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2">
             <User className="text-zinc-400 size-5" />
             <input
               type="text"
@@ -44,7 +45,7 @@ export function TripConfirmModal({
             />
           </div>
 
-          <div className="py-2.5 p-4 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2">
+          <div className="h-14 px-4 bg-zinc-950 border border-zinc-800 rounded-lg flex items-center gap-2">
             <User className="text-zinc-400 size-5" />
             <input
               type="email"
@@ -53,14 +54,11 @@ export function TripConfirmModal({
               className="bg-transparent text-lg placeholder:text-zinc-400 outline-none flex-1"
             />
           </div>
+          <Button type={'submit'} size="full">
+            Convidar
+            <Plus className="size-5" />
+          </Button>
         </form>
-        <button
-          type={'submit'}
-          className="bg-lime-300 text-lime-950 rounded-lg px-5 py-2 font-medium inline-flex justify-center items-center gap-2 hover:bg-lime-400 transition-colors w-full"
-        >
-          Convidar
-          <Plus className="size-5" />
-        </button>
       </div>
     </div>
   )

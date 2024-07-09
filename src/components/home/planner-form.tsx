@@ -28,6 +28,7 @@ export function PlannerForm() {
 
   function handleCreateTrip(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
+    console.log('Trip created')
     router.push('/trips/1')
   }
 
