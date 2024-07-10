@@ -2,35 +2,40 @@
 import { AtSign, Plus, X } from 'lucide-react'
 import { FormEvent } from 'react'
 import { Button } from '../ui/button'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '../ui/dialog'
+import { DialogTrigger } from '@radix-ui/react-dialog'
+import { Input } from '../ui/input'
 
 interface GuestInviteModalProps {
-  closeModal: () => void
+  children: React.ReactNode
   emailsToInvite: string[]
   addNewEmailsToInvite: (e: FormEvent<HTMLFormElement>) => void
   removeEmailsFromInvite: (email: string) => void
 }
 
 export function GuestInviteModal({
-  closeModal,
   emailsToInvite,
   addNewEmailsToInvite,
   removeEmailsFromInvite,
+  children,
 }: GuestInviteModalProps) {
   return (
-    <div className="fixed inset-0 bg-black/60 flex items-center justify-center">
-      <div className="w-[640px] rounded-xl py-5 px-6 shadow-shape bg-zinc-900 space-y-5">
-        <div className="space-y-2">
-          <div className="flex items-center justify-between">
-            <h2 className="text-lg font-semibold">Selecionar convidados</h2>
-            <button onClick={closeModal}>
-              <X className="size-5 text-zinc-400" />
-            </button>
-          </div>
-          <p className="text-sm text-zinc-400">
+    <Dialog>
+      <DialogTrigger asChild>{children}</DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Selecionar convidados</DialogTitle>
+          <DialogDescription>
             Os convidados irão receber e-mails para confirmar a participação na
             viagem.
-          </p>
-        </div>
+          </DialogDescription>
+        </DialogHeader>
         <ul className="flex flex-wrap gap-2">
           {emailsToInvite.map((email) => (
             <li key={email}>
@@ -55,11 +60,10 @@ export function GuestInviteModal({
         >
           <div className="px-2 flex items-center flex-1 gap-2">
             <AtSign className="text-zinc-400 size-5" />
-            <input
+            <Input
               type="email"
               name="email"
               placeholder="Digite o e-mail do convidado"
-              className="bg-transparent text-lg placeholder:text-zinc-400 outline-none flex-1"
             />
           </div>
           <Button type={'submit'}>
@@ -67,7 +71,7 @@ export function GuestInviteModal({
             <Plus className="size-5" />
           </Button>
         </form>
-      </div>
-    </div>
+      </DialogContent>
+    </Dialog>
   )
 }

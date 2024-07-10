@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { Toaster } from 'sonner'
+import { QueryProvider } from '@/components/query-provider'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -19,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable}`}>{children}</body>
+      <body className={`${inter.variable}`}>
+        <Toaster richColors theme="dark" />
+        <QueryProvider>{children}</QueryProvider>
+      </body>
     </html>
   )
 }

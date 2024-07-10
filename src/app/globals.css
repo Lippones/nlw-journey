@@ -9,3 +9,13 @@
 body {
   @apply bg-zinc-950 text-white font-sans antialiased;
 }
+
+input {
+  color-scheme: dark;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
