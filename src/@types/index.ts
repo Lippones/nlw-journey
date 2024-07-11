@@ -20,3 +20,9 @@ export type Activity = {
     occurs_at: string
   }[]
 }
+
+export type ImportantLink = {
+  id: string
+  title: string
+  url: string
+}
