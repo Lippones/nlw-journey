@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/create-next-app).
+<h1 align="center">Plann.r</h1>
 
-## Getting Started
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+</p>
 
-First, run the development server:
+<br>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<div align="center">
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Preview](./.github/assets/Cover.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load Inter, a custom Google Font.
+<hr>
+<br>
+<br>
 
-## Learn More
+## 💻 Projeto <a name = "projeto"></a>
 
-To learn more about Next.js, take a look at the following resources:
+Este projeto foi desenvolvido durante o evento NLW Journey da Rocketseat. É um site desktop para montar planos de viagem com amigos, registrar atividades e armazenar links úteis.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br>
+<br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### &nbsp;&nbsp;&nbsp;&nbsp; Front-End
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **TypeScript**
+- **React JS**
+- **Tailwind CSS** - Framework CSS para estilização em classes
+- **NextJs** - Ferramenta para gerar estrutura de código para front-end
+- **Date-fns** - Lib para trabalhar com datas
+- **Radix UI** - Lib de componentes sem qualquer estilização com foco em acessibilidade
+- **Tailwind Merge** - Unir classes CSS
+- **Axios** - Lib para acessar API
+- **React Query** - é frequentemente descrito como a biblioteca de busca de dados ausente para aplicativos da web, mas em termos mais técnicos, facilita muito a busca, o armazenamento em cache, a sincronização e a atualização do estado do servidor em seus aplicativos da web.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<br>
+<br>
+
+## 🔒 Licença
+
+Esse projeto está sob a licença MIT.
+
+<hr>
