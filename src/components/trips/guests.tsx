@@ -18,8 +18,6 @@ export function Guests() {
 
   const participants = data?.participants
 
-  console.log(participants)
-
   return (
     <div className="space-y-6">
       <h2 className="text-semibold text-lg">Convidados</h2>
@@ -36,7 +34,7 @@ export function Guests() {
               </span>
             </div>
             {participant.is_confirmed ? (
-              <CircleCheck className="text-green-400 size-5 shrink-0" />
+              <CircleCheck className="text-lime-300 size-5 shrink-0" />
             ) : (
               <CircleDashed className="text-zinc-400 size-5 shrink-0" />
             )}
